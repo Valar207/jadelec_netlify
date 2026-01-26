@@ -1,0 +1,2 @@
+je voudrai créer un site vitrine pour une entreprise d'électricité qui s'appelle Jadelec. Je veux qu'il y ai une partie admin pour gérer le contenu du site, par exemple les services proposés, les réalisations, les contacts, etc.
+Je veux utiliser netlify pour l'hébergement, Eleventy et bmad pour la génération du site. Sur la page d'accueil je voudrai mettre en avant les services proposés comme la gtb domotique, les bornes de recharge électrique, etc.

@@ -1,0 +1,47 @@
+---
+layout: layouts/base.njk
+title: Nos réalisations
+description: Découvrez les projets réalisés par Jadelec en électricité générale, GTB, bornes de recharge IRVE et domotique pour entreprises et copropriétés.
+---
+
+<section class="py-12 md:py-16">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-12">
+      <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Nos réalisations</h1>
+      <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+        Découvrez quelques-uns de nos projets en électricité générale, GTB, bornes de recharge et domotique.
+      </p>
+    </div>
+    
+    {% if collections.realisations.length > 0 %}
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {% for realisation in collections.realisations | reverse %}
+        {% set title = realisation.data.title %}
+        {% set description = realisation.data.description %}
+        {% set category = realisation.data.category %}
+        {% set image = realisation.data.image %}
+        {% include "components/realisation-card.njk" %}
+      {% endfor %}
+    </div>
+    {% else %}
+    <div class="text-center py-12 bg-gray-50 rounded-xl">
+      <svg class="w-16 h-16 text-gray-300 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+      </svg>
+      <p class="text-gray-500">Les réalisations seront bientôt disponibles.</p>
+    </div>
+    {% endif %}
+    
+    <!-- CTA -->
+    <div class="mt-16 bg-blue-50 rounded-xl p-8 text-center">
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">Vous avez un projet similaire ?</h2>
+      <p class="text-gray-600 mb-6">Contactez-nous pour discuter de vos besoins et obtenir un devis gratuit.</p>
+      <a href="/contact/" class="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors">
+        Demander un devis
+        <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,48 @@
+{
+  "main": [
+    {
+      "label": "Accueil",
+      "url": "/"
+    },
+    {
+      "label": "Services",
+      "url": "/services/",
+      "children": [
+        {
+          "label": "Courant Fort",
+          "url": "/services/courant-fort/"
+        },
+        {
+          "label": "Courant Faible",
+          "url": "/services/courant-faible/"
+        },
+        {
+          "label": "Bornes de Recharge IRVE",
+          "url": "/services/bornes-recharge-irve/"
+        },
+        {
+          "label": "GTB / Domotique",
+          "url": "/services/gtb-domotique/"
+        },
+        {
+          "label": "Entretien & Dépannage",
+          "url": "/services/entretien-depannage/"
+        }
+      ]
+    },
+    {
+      "label": "Réalisations",
+      "url": "/realisations/"
+    },
+    {
+      "label": "Contact",
+      "url": "/contact/"
+    }
+  ],
+  "footer": [
+    {
+      "label": "Mentions légales",
+      "url": "/mentions-legales/"
+    }
+  ]
+}

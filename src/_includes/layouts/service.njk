@@ -1,0 +1,54 @@
+---
+layout: layouts/base.njk
+---
+
+<article class="py-12 md:py-16">
+  <div class="container mx-auto px-4 max-w-4xl">
+    <!-- Breadcrumb -->
+    <nav class="mb-8 text-sm" aria-label="Breadcrumb">
+      <ol class="flex items-center space-x-2">
+        <li><a href="/" class="text-gray-500 hover:text-blue-600">Accueil</a></li>
+        <li><span class="text-gray-400">/</span></li>
+        <li><a href="/services/" class="text-gray-500 hover:text-blue-600">Services</a></li>
+        <li><span class="text-gray-400">/</span></li>
+        <li class="text-gray-900 font-medium">{{ title }}</li>
+      </ol>
+    </nav>
+    
+    <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">{{ title }}</h1>
+    
+    {% if description %}
+    <p class="text-xl text-gray-600 mb-8">{{ description }}</p>
+    {% endif %}
+    
+    <div class="prose prose-lg max-w-none mb-12">
+      {{ content | safe }}
+    </div>
+    
+    <!-- CTA Section -->
+    <div class="bg-blue-50 rounded-xl p-8 text-center">
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">Besoin d'un devis ?</h2>
+      <p class="text-gray-600 mb-6">Contactez-nous pour discuter de votre projet</p>
+      <a href="/contact/" class="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors">
+        Demander un devis
+        <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+        </svg>
+      </a>
+    </div>
+    
+    <!-- Other Services -->
+    <div class="mt-16">
+      <h2 class="text-2xl font-bold text-gray-900 mb-6">Nos autres services</h2>
+      <div class="grid md:grid-cols-2 gap-4">
+        {% for service in collections.services %}
+          {% if service.url !== page.url %}
+          <a href="{{ service.url }}" class="block p-4 border border-gray-200 rounded-lg hover:border-blue-500 hover:shadow-md transition-all">
+            <h3 class="font-semibold text-gray-900">{{ service.data.title }}</h3>
+          </a>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</article>

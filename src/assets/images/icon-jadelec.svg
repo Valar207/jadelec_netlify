@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Outer circle (partial) -->
+  <path d="M50 10 A35 35 0 1 1 50 90 A35 35 0 0 1 75 15" fill="none" stroke="#5B9BD5" stroke-width="8" stroke-linecap="round"/>
+  <!-- Plug body -->
+  <rect x="28" y="38" width="30" height="24" rx="4" fill="#5B9BD5"/>
+  <!-- Plug prongs -->
+  <rect x="58" y="44" width="15" height="5" rx="2.5" fill="#5B9BD5"/>
+  <rect x="58" y="51" width="15" height="5" rx="2.5" fill="#5B9BD5"/>
+  <!-- Plug cord -->
+  <path d="M12 50 L28 50" stroke="#5B9BD5" stroke-width="7" stroke-linecap="round"/>
+</svg>
