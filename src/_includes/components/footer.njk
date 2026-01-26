@@ -6,7 +6,7 @@
       <div class="lg:col-span-1">
         <img src="/assets/images/JADELEC Logo.png.webp" alt="Jadelec" class="h-12 mb-6">
         <p class="text-gray-600 dark:text-dark-400 mb-6 leading-relaxed">{{ site.tagline }}</p>
-        <p class="text-gray-500 dark:text-dark-400 text-sm">
+        <p class="text-gray-600 dark:text-dark-300 text-sm">
           {{ site.address.street }}<br>
           {{ site.address.postalCode }} {{ site.address.city }}
         </p>
@@ -99,12 +99,12 @@
   <div class="border-t border-gray-200 dark:border-dark-800">
     <div class="container mx-auto px-4 py-6">
       <div class="flex flex-col md:flex-row justify-between items-center gap-4">
-        <p class="text-gray-500 dark:text-dark-400 text-sm">
+        <p class="text-gray-600 dark:text-dark-300 text-sm">
           © 2024 {{ site.name }}. Tous droits réservés.
         </p>
         <div class="flex items-center space-x-6">
           {% for item in navigation.footer %}
-          <a href="{{ item.url }}" class="text-gray-500 dark:text-dark-400 hover:text-primary-500 text-sm transition-colors">
+          <a href="{{ item.url }}" class="text-gray-600 dark:text-dark-300 hover:text-primary-500 text-sm transition-colors">
             {{ item.label }}
           </a>
           {% endfor %}
