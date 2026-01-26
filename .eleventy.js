@@ -1,7 +1,13 @@
 module.exports = function(eleventyConfig) {
-  // Copier les assets statiques
-  eleventyConfig.addPassthroughCopy("src/assets");
+  // Copier les assets statiques (sauf CSS qui est géré par Tailwind)
+  eleventyConfig.addPassthroughCopy("src/assets/images");
   eleventyConfig.addPassthroughCopy("src/admin");
+  
+  // Watch le CSS source pour rebuild
+  eleventyConfig.addWatchTarget("./src/assets/css/");
+  
+  // Ignorer le dossier _site/assets/css pour éviter les conflits
+  eleventyConfig.watchIgnores.add("_site/assets/css/*");
 
   // Collections
   eleventyConfig.addCollection("services", function(collectionApi) {
