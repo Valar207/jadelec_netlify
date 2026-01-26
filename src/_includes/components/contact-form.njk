@@ -5,6 +5,7 @@
   netlify-honeypot="bot-field"
   action="/contact/merci/"
   class="space-y-6"
+  id="contact-form"
 >
   <!-- Honeypot field for spam protection -->
   <p class="hidden">
@@ -52,11 +53,10 @@
         type="tel" 
         id="phone" 
         name="phone"
-        pattern="^(?:(?:\+|00)33|0)\s*[1-9](?:[\s.-]*\d{2}){4}$"
-        title="Veuillez entrer un numéro de téléphone français valide (ex: 06 12 34 56 78)"
-        class="w-full px-4 py-3 border border-gray-300 dark:border-dark-600 bg-white dark:bg-dark-700 text-gray-900 dark:text-white rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors placeholder-gray-400 dark:placeholder-dark-400 invalid:border-red-500 invalid:focus:ring-red-500"
+        class="w-full px-4 py-3 border border-gray-300 dark:border-dark-600 bg-white dark:bg-dark-700 text-gray-900 dark:text-white rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors placeholder-gray-400 dark:placeholder-dark-400"
         placeholder="06 12 34 56 78"
       >
+      <p id="phone-error" class="hidden text-red-500 text-sm mt-1">Numéro de téléphone invalide (ex: 06 12 34 56 78)</p>
     </div>
     
     <div>
@@ -108,3 +108,36 @@
     Vos données sont utilisées uniquement pour répondre à votre demande.
   </p>
 </form>
+
+<script>
+  const contactForm = document.getElementById('contact-form');
+  const phoneInput = document.getElementById('phone');
+  const phoneError = document.getElementById('phone-error');
+  
+  const phoneRegex = /^(?:(?:\+|00)33|0)\s*[1-9](?:[\s.-]*\d{2}){4}$/;
+  
+  function validatePhone() {
+    const value = phoneInput.value.trim();
+    if (value && !phoneRegex.test(value)) {
+      phoneInput.classList.add('border-red-500', 'focus:ring-red-500');
+      phoneInput.classList.remove('border-gray-300', 'dark:border-dark-600');
+      phoneError.classList.remove('hidden');
+      return false;
+    } else {
+      phoneInput.classList.remove('border-red-500', 'focus:ring-red-500');
+      phoneInput.classList.add('border-gray-300', 'dark:border-dark-600');
+      phoneError.classList.add('hidden');
+      return true;
+    }
+  }
+  
+  phoneInput.addEventListener('blur', validatePhone);
+  phoneInput.addEventListener('input', validatePhone);
+  
+  contactForm.addEventListener('submit', function(e) {
+    if (!validatePhone()) {
+      e.preventDefault();
+      phoneInput.focus();
+    }
+  });
+</script>
