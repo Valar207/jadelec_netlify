@@ -1,19 +1,19 @@
-<a href="{{ url }}" class="group block bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden border border-gray-100">
+<a href="{{ service.url }}" class="group block bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden border border-gray-100">
   <div class="p-6">
-    {% if icon %}
+    {% if service.icon %}
     <div class="w-14 h-14 bg-blue-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-blue-600 transition-colors">
       <svg class="w-7 h-7 text-blue-600 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        {{ icon | safe }}
+        {{ service.icon | safe }}
       </svg>
     </div>
     {% endif %}
     
     <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
-      {{ title }}
+      {{ service.title }}
     </h3>
     
-    {% if description %}
-    <p class="text-gray-600 mb-4">{{ description }}</p>
+    {% if service.description %}
+    <p class="text-gray-600 mb-4">{{ service.description }}</p>
     {% endif %}
     
     <span class="inline-flex items-center text-blue-600 font-medium">
