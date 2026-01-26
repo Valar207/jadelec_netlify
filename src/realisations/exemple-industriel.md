@@ -3,10 +3,10 @@ title: GTB entrepôt logistique Saint-Denis
 description: Installation d'un système de GTB pour optimiser la gestion énergétique d'un entrepôt de 5000m².
 category: Industriel
 images:
-  - /assets/images/realisations/gtb-1.jpg
-  - /assets/images/realisations/gtb-2.jpg
-  - /assets/images/realisations/gtb-3.jpg
-  - /assets/images/realisations/gtb-4.jpg
+  - https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&h=600&fit=crop
+  - https://images.unsplash.com/photo-1565793298595-6a879b1d9492?w=800&h=600&fit=crop
+  - https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=800&h=600&fit=crop
+  - https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=800&h=600&fit=crop
 date: 2024-03-10
 client: Logistique Express
 location: Saint-Denis (93)
