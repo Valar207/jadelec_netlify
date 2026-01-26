@@ -17,8 +17,15 @@ collections:
       - { label: "Titre", name: "title", widget: "string" }
       - { label: "Description", name: "description", widget: "text" }
       - { label: "Catégorie", name: "category", widget: "select", options: ["Tertiaire", "Copropriété", "Industriel", "Particulier"] }
-      - { label: "Image", name: "image", widget: "image", required: false }
+      - label: "Photos (1 à 4)"
+        name: "images"
+        widget: "list"
+        max: 4
+        field: { label: "Image", name: "image", widget: "image" }
       - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Client", name: "client", widget: "string", required: false }
+      - { label: "Lieu", name: "location", widget: "string", required: false }
+      - { label: "Année", name: "year", widget: "string", required: false }
       - { label: "Contenu", name: "body", widget: "markdown" }
 
   - name: "services"

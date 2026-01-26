@@ -1,10 +1,14 @@
 ---
 title: Installation IRVE copropriété Montreuil
-description: Installation de 12 bornes de recharge pour véhicules électriques
-  dans une copropriété de 80 lots.
+description: Installation de 12 bornes de recharge pour véhicules électriques dans une copropriété de 80 lots.
 category: Copropriété
-image: /assets/images/realisations/9d03145c-abd8-4f70-9b5c-606b8bd92d26.png
+images:
+  - /assets/images/realisations/9d03145c-abd8-4f70-9b5c-606b8bd92d26.png
 date: 2024-02-20
+client: Syndic ABC Gestion
+location: Montreuil (93)
+year: 2024
+permalink: /realisations/irve-copropriete-montreuil/
 ---
 
 Installation d'une infrastructure de recharge collective pour une copropriété à Montreuil.

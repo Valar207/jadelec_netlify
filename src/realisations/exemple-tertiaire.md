@@ -2,8 +2,14 @@
 title: Rénovation électrique bureaux Paris 15
 description: Rénovation complète de l'installation électrique d'un immeuble de bureaux de 2000m².
 category: Tertiaire
-image: /assets/images/realisations/tertiaire-placeholder.jpg
+images:
+  - /assets/images/realisations/tertiaire-1.jpg
+  - /assets/images/realisations/tertiaire-2.jpg
 date: 2024-01-15
+client: SCI Immobilière Paris
+location: Paris 15ème
+year: 2024
+permalink: /realisations/renovation-bureaux-paris-15/
 ---
 
 Rénovation complète de l'installation électrique d'un immeuble de bureaux dans le 15ème arrondissement de Paris.

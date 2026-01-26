@@ -16,10 +16,6 @@ description: Découvrez les projets réalisés par Jadelec en électricité gén
     {% if collections.realisations.length > 0 %}
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
       {% for realisation in collections.realisations | reverse %}
-        {% set title = realisation.data.title %}
-        {% set description = realisation.data.description %}
-        {% set category = realisation.data.category %}
-        {% set image = realisation.data.image %}
         {% include "components/realisation-card.njk" %}
       {% endfor %}
     </div>
