@@ -94,15 +94,27 @@
 
   /* Prose */
   .prose {
-    @apply text-dark-400 leading-relaxed;
+    @apply text-gray-700 leading-relaxed;
+  }
+
+  .dark .prose {
+    @apply text-dark-300;
   }
   
   .prose h2 {
-    @apply text-2xl font-bold text-dark-900 mt-8 mb-4;
+    @apply text-2xl font-bold text-gray-900 mt-8 mb-4;
+  }
+
+  .dark .prose h2 {
+    @apply text-white;
   }
   
   .prose h3 {
-    @apply text-xl font-semibold text-dark-900 mt-6 mb-3;
+    @apply text-xl font-semibold text-gray-900 mt-6 mb-3;
+  }
+
+  .dark .prose h3 {
+    @apply text-white;
   }
   
   .prose p {
@@ -141,7 +153,11 @@
   }
 
   .badge-primary {
-    @apply bg-primary-500/10 text-primary-500 border border-primary-500/20;
+    @apply bg-primary-500/10 text-primary-600 border border-primary-500/20;
+  }
+
+  .dark .badge-primary {
+    @apply text-primary-300;
   }
 
   .badge-dark {
