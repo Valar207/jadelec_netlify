@@ -26,15 +26,16 @@ layout: layouts/base.njk
     </header>
 
     <!-- Gallery -->
-    {% if images and images.length > 0 %}
+    {% set imgCount = images | length if images else 0 %}
+    {% if images and imgCount > 0 %}
     <div class="mb-12">
-      {% if images.length == 1 %}
+      {% if imgCount == 1 %}
       <!-- Single image - full width -->
       <div class="rounded-xl overflow-hidden shadow-lg">
         <img src="{{ images[0] }}" alt="{{ title }}" class="w-full h-auto object-cover max-h-[500px]">
       </div>
       
-      {% elif images.length == 2 %}
+      {% elif imgCount == 2 %}
       <!-- Two images - side by side -->
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
         {% for img in images %}
@@ -44,7 +45,7 @@ layout: layouts/base.njk
         {% endfor %}
       </div>
       
-      {% elif images.length == 3 %}
+      {% elif imgCount == 3 %}
       <!-- Three images - one large + two small -->
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div class="md:row-span-2 rounded-xl overflow-hidden shadow-lg">
@@ -58,13 +59,15 @@ layout: layouts/base.njk
         </div>
       </div>
       
-      {% elif images.length >= 4 %}
+      {% elif imgCount >= 4 %}
       <!-- Four images - grid 2x2 -->
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        {% for img in images | slice(0, 4) %}
+        {% for img in images %}
+        {% if loop.index <= 4 %}
         <div class="rounded-xl overflow-hidden shadow-lg aspect-[4/3]">
           <img src="{{ img }}" alt="{{ title }} - Photo {{ loop.index }}" class="w-full h-full object-cover">
         </div>
+        {% endif %}
         {% endfor %}
       </div>
       {% endif %}
