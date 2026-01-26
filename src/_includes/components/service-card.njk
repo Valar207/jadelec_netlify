@@ -1,24 +1,27 @@
-<a href="{{ service.url }}" class="group block bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden border border-gray-100">
-  <div class="p-6">
+<a href="{{ service.url }}" class="group block bg-white dark:bg-dark-900 rounded-2xl border border-gray-200 dark:border-dark-700 p-6 relative overflow-hidden shadow-card hover:shadow-card-hover dark:hover:shadow-glow hover:-translate-y-2 transition-all duration-500">
+  <!-- Glow effect on hover -->
+  <div class="absolute inset-0 bg-gradient-to-br from-primary-500/0 to-primary-500/0 group-hover:from-primary-500/5 group-hover:to-transparent transition-all duration-500"></div>
+  
+  <div class="relative z-10">
     {% if service.icon %}
-    <div class="w-14 h-14 bg-blue-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-blue-600 transition-colors">
-      <svg class="w-7 h-7 text-blue-600 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-primary-500/20 to-primary-600/10 border border-primary-500/20 flex items-center justify-center mb-5 group-hover:scale-110 group-hover:shadow-glow transition-all duration-300">
+      <svg class="w-7 h-7 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         {{ service.icon | safe }}
       </svg>
     </div>
     {% endif %}
     
-    <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
+    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-primary-500 transition-colors">
       {{ service.title }}
     </h3>
     
     {% if service.description %}
-    <p class="text-gray-600 mb-4">{{ service.description }}</p>
+    <p class="text-gray-600 dark:text-dark-400 mb-5 leading-relaxed">{{ service.description }}</p>
     {% endif %}
     
-    <span class="inline-flex items-center text-blue-600 font-medium">
+    <span class="inline-flex items-center text-primary-500 font-semibold group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">
       En savoir plus
-      <svg class="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <svg class="ml-2 w-4 h-4 group-hover:translate-x-2 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
       </svg>
     </span>

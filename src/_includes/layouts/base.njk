@@ -11,10 +11,19 @@
   <link rel="icon" href="/assets/images/favicon.png" type="image/png">
   <link rel="apple-touch-icon" href="/assets/images/favicon.png">
   
+  <!-- Dark mode script (before body to prevent flash) -->
+  <script>
+    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  </script>
+  
   <!-- Netlify Identity Widget (for CMS) -->
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
-<body class="min-h-screen flex flex-col bg-white text-gray-900">
+<body class="min-h-screen flex flex-col bg-white dark:bg-dark-950 text-gray-900 dark:text-white transition-colors duration-300">
   
   {% include "components/header.njk" %}
   
@@ -38,6 +47,29 @@
         menuIcon.classList.toggle('hidden');
         closeIcon.classList.toggle('hidden');
       });
+    }
+  </script>
+  
+  <!-- Dark mode toggle script -->
+  <script>
+    const themeToggle = document.getElementById('theme-toggle');
+    const themeToggleMobile = document.getElementById('theme-toggle-mobile');
+    
+    function toggleTheme() {
+      if (document.documentElement.classList.contains('dark')) {
+        document.documentElement.classList.remove('dark');
+        localStorage.theme = 'light';
+      } else {
+        document.documentElement.classList.add('dark');
+        localStorage.theme = 'dark';
+      }
+    }
+    
+    if (themeToggle) {
+      themeToggle.addEventListener('click', toggleTheme);
+    }
+    if (themeToggleMobile) {
+      themeToggleMobile.addEventListener('click', toggleTheme);
     }
   </script>
   
