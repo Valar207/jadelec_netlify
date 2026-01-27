@@ -1,0 +1,96 @@
+{
+  "page": {
+    "breadcrumb": {
+      "home": "Accueil",
+      "services": "Services"
+    },
+    "cta": {
+      "enabled": true,
+      "title": "Besoin d'un devis ?",
+      "description": "Contactez-nous pour discuter de votre projet",
+      "buttonText": "Demander un devis",
+      "buttonUrl": "/contact/"
+    },
+    "otherServices": {
+      "enabled": true,
+      "title": "Nos autres services"
+    }
+  },
+  "defaults": {
+    "icon": "bolt",
+    "image": "",
+    "features": []
+  },
+  "services": {
+    "courant-fort": {
+      "shortDescription": "Installations électriques complètes, éclairage, tableaux électriques pour tous types de bâtiments.",
+      "icon": "bolt",
+      "image": "",
+      "heroImage": "",
+      "features": [
+        "Tableaux électriques",
+        "Distribution électrique",
+        "Prises et interrupteurs",
+        "Éclairage professionnel",
+        "Mise aux normes NF C 15-100"
+      ],
+      "clients": ["Tertiaire", "Industriel", "Copropriétés", "Particuliers"]
+    },
+    "courant-faible": {
+      "shortDescription": "Réseaux informatiques, vidéosurveillance, contrôle d'accès, détection incendie.",
+      "icon": "cpu",
+      "image": "",
+      "heroImage": "",
+      "features": [
+        "Câblage informatique",
+        "Vidéosurveillance",
+        "Contrôle d'accès",
+        "Détection incendie",
+        "Interphonie"
+      ],
+      "clients": ["Entreprises", "Commerces", "Copropriétés"]
+    },
+    "bornes-recharge-irve": {
+      "shortDescription": "Installation de bornes de recharge pour véhicules électriques en entreprise et copropriété.",
+      "icon": "sun",
+      "image": "",
+      "heroImage": "",
+      "features": [
+        "Étude de faisabilité",
+        "Installation certifiée IRVE",
+        "Bornes individuelles et partagées",
+        "Gestion de la recharge",
+        "Maintenance"
+      ],
+      "clients": ["Copropriétés", "Entreprises", "Parkings publics"]
+    },
+    "gtb-domotique": {
+      "shortDescription": "GTB et solutions domotiques pour optimiser votre consommation énergétique.",
+      "icon": "building",
+      "image": "",
+      "heroImage": "",
+      "features": [
+        "Gestion technique centralisée",
+        "Supervision énergétique",
+        "Automatisation du bâtiment",
+        "Domotique",
+        "Optimisation des consommations"
+      ],
+      "clients": ["Bâtiments tertiaires", "Industries", "Copropriétés"]
+    },
+    "entretien-depannage": {
+      "shortDescription": "Maintenance préventive et interventions d'urgence pour assurer la continuité de vos installations.",
+      "icon": "settings",
+      "image": "",
+      "heroImage": "",
+      "features": [
+        "Contrats de maintenance",
+        "Dépannage 24h/24",
+        "Diagnostic électrique",
+        "Remplacement de matériel",
+        "Mise en conformité"
+      ],
+      "clients": ["Tous secteurs"]
+    }
+  }
+}

@@ -1,0 +1,132 @@
+{
+  "hero": {
+    "badge": "Électricité générale en Île-de-France",
+    "title": "Jadelec",
+    "subtitle": "Électricité générale",
+    "description": "Spécialistes en GTB (Gestion Technique du Bâtiment), bornes de recharge IRVE et domotique. Nous accompagnons les entreprises et copropriétés depuis plus de 15 ans.",
+    "ctaPrimary": {
+      "text": "Demander un devis gratuit",
+      "url": "/contact/"
+    },
+    "ctaSecondary": {
+      "text": "Nous appeler",
+      "showPhone": true
+    },
+    "trustBadges": [
+      {
+        "title": "Certifié",
+        "subtitle": "Qualifications reconnues",
+        "icon": "shield"
+      },
+      {
+        "title": "Île-de-France",
+        "subtitle": "Basés à La Courneuve (93)",
+        "icon": "location"
+      },
+      {
+        "title": "Réactif",
+        "subtitle": "Intervention sous 24h",
+        "icon": "bolt"
+      }
+    ]
+  },
+  "services": {
+    "enabled": true,
+    "badge": "Nos expertises",
+    "title": "Des solutions",
+    "titleHighlight": "sur mesure",
+    "description": "Des solutions électriques complètes pour les professionnels et les copropriétés",
+    "items": [
+      {
+        "title": "Courant Fort",
+        "description": "Installations électriques complètes, éclairage, tableaux électriques pour tous types de bâtiments.",
+        "url": "/services/courant-fort/",
+        "icon": "bolt"
+      },
+      {
+        "title": "Courant Faible",
+        "description": "Réseaux informatiques, vidéosurveillance, contrôle d'accès, détection incendie.",
+        "url": "/services/courant-faible/",
+        "icon": "cpu"
+      },
+      {
+        "title": "Bornes de Recharge IRVE",
+        "description": "Installation de bornes de recharge pour véhicules électriques en entreprise et copropriété.",
+        "url": "/services/bornes-recharge-irve/",
+        "icon": "sun"
+      },
+      {
+        "title": "Gestion Technique du Bâtiment (GTB)",
+        "description": "GTB et solutions domotiques pour optimiser votre consommation énergétique.",
+        "url": "/services/gtb-domotique/",
+        "icon": "building"
+      },
+      {
+        "title": "Entretien & Dépannage",
+        "description": "Maintenance préventive et interventions d'urgence pour assurer la continuité de vos installations.",
+        "url": "/services/entretien-depannage/",
+        "icon": "settings"
+      }
+    ]
+  },
+  "stats": {
+    "enabled": true,
+    "items": [
+      {
+        "value": "15+",
+        "label": "Années d'expérience"
+      },
+      {
+        "value": "500+",
+        "label": "Projets réalisés"
+      },
+      {
+        "value": "24h",
+        "label": "Délai d'intervention"
+      },
+      {
+        "label": "Clients satisfaits",
+        "value": "98%"
+      }
+    ]
+  },
+  "whyUs": {
+    "enabled": true,
+    "badge": "Pourquoi nous choisir",
+    "title": "Une expertise",
+    "titleHighlight": "reconnue",
+    "description": "Depuis plus de 15 ans, Jadelec accompagne les entreprises et copropriétés d'Île-de-France dans tous leurs projets électriques.",
+    "image": "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=800&h=600&fit=crop",
+    "imageAlt": "Équipe Jadelec",
+    "features": [
+      {
+        "title": "Qualifications reconnues",
+        "description": "Entreprise certifiée avec des techniciens formés aux dernières normes",
+        "icon": "shield"
+      },
+      {
+        "title": "Réactivité garantie",
+        "description": "Intervention sous 24h pour les urgences, devis sous 48h",
+        "icon": "bolt"
+      },
+      {
+        "title": "Équipe expérimentée",
+        "description": "Des professionnels passionnés à votre service",
+        "icon": "users"
+      }
+    ]
+  },
+  "cta": {
+    "enabled": true,
+    "title": "Un projet électrique ?",
+    "description": "Contactez-nous pour un devis gratuit et personnalisé. Notre équipe vous répond sous 24h.",
+    "primaryButton": {
+      "text": "Demander un devis",
+      "url": "/contact/"
+    },
+    "secondaryButton": {
+      "text": "Nous appeler",
+      "showPhone": true
+    }
+  }
+}

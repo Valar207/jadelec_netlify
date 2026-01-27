@@ -1,0 +1,28 @@
+{
+  "colors": {
+    "primary": "#2563eb",
+    "primaryDark": "#1d4ed8",
+    "primaryLight": "#3b82f6",
+    "accent": "#f59e0b",
+    "accentDark": "#d97706",
+    "success": "#10b981",
+    "error": "#ef4444",
+    "warning": "#f59e0b"
+  },
+  "fonts": {
+    "heading": "Inter",
+    "body": "Inter",
+    "googleFontsUrl": "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+  },
+  "spacing": {
+    "borderRadius": "0.75rem",
+    "borderRadiusLarge": "1rem",
+    "borderRadiusSmall": "0.5rem"
+  },
+  "buttons": {
+    "primaryText": "Demander un devis",
+    "primaryUrl": "/contact/",
+    "secondaryText": "Nous appeler",
+    "showPhoneInHeader": true
+  }
+}

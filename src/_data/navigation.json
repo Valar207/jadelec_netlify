@@ -1,4 +1,14 @@
 {
+  "header": {
+    "logo": "/assets/images/JADELEC Logo.png.webp",
+    "logoAlt": "Jadelec",
+    "showPhone": true,
+    "ctaButton": {
+      "text": "Demander un devis",
+      "url": "/contact/",
+      "enabled": true
+    }
+  },
   "main": [
     {
       "label": "Accueil",

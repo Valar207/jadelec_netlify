@@ -1,0 +1,38 @@
+{
+  "page": {
+    "title": "Page non trouvée",
+    "code": "404",
+    "heading": "Oups ! Page introuvable",
+    "description": "La page que vous recherchez n'existe pas ou a été déplacée.",
+    "image": "",
+    "buttons": {
+      "home": {
+        "text": "Retour à l'accueil",
+        "url": "/"
+      },
+      "contact": {
+        "text": "Nous contacter",
+        "url": "/contact/",
+        "enabled": true
+      }
+    },
+    "suggestions": {
+      "enabled": true,
+      "title": "Vous cherchez peut-être :",
+      "links": [
+        {
+          "label": "Nos services",
+          "url": "/services/courant-fort/"
+        },
+        {
+          "label": "Nos réalisations",
+          "url": "/realisations/"
+        },
+        {
+          "label": "Nous contacter",
+          "url": "/contact/"
+        }
+      ]
+    }
+  }
+}

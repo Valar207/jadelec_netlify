@@ -1,0 +1,54 @@
+{
+  "page": {
+    "title": "Mentions légales",
+    "seo": {
+      "title": "Mentions légales",
+      "description": "Mentions légales du site Jadelec - Informations sur l'éditeur, l'hébergeur et la politique de confidentialité."
+    }
+  },
+  "sections": {
+    "editor": {
+      "title": "Éditeur du site",
+      "companyName": "Jadelec",
+      "legalForm": "SARL",
+      "capital": "",
+      "siret": "",
+      "rcs": "",
+      "tva": "",
+      "director": "",
+      "address": "163 avenue Paul Vaillant-Couturier, 93120 LA COURNEUVE",
+      "phone": "01 48 35 50 51",
+      "email": "contact@jadelec.net"
+    },
+    "host": {
+      "title": "Hébergement",
+      "name": "Netlify, Inc.",
+      "address": "2325 3rd Street, Suite 296, San Francisco, California 94107",
+      "website": "https://www.netlify.com"
+    },
+    "intellectual": {
+      "title": "Propriété intellectuelle",
+      "content": "L'ensemble du contenu de ce site (textes, images, vidéos, logos, etc.) est protégé par le droit d'auteur. Toute reproduction, même partielle, est interdite sans autorisation préalable."
+    },
+    "privacy": {
+      "title": "Protection des données personnelles",
+      "content": "Conformément au Règlement Général sur la Protection des Données (RGPD), vous disposez d'un droit d'accès, de rectification et de suppression de vos données personnelles. Pour exercer ce droit, contactez-nous à l'adresse email indiquée ci-dessus.",
+      "dataController": "Jadelec",
+      "dataUsage": "Les données collectées via le formulaire de contact sont utilisées uniquement pour répondre à vos demandes et ne sont jamais transmises à des tiers."
+    },
+    "cookies": {
+      "title": "Cookies",
+      "content": "Ce site utilise des cookies pour améliorer votre expérience de navigation. En continuant à naviguer sur ce site, vous acceptez l'utilisation de cookies.",
+      "types": [
+        {
+          "name": "Cookies essentiels",
+          "description": "Nécessaires au fonctionnement du site"
+        },
+        {
+          "name": "Cookies analytiques",
+          "description": "Permettent d'analyser la fréquentation du site"
+        }
+      ]
+    }
+  }
+}

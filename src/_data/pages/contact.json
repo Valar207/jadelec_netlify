@@ -1,0 +1,47 @@
+{
+  "page": {
+    "title": "Contactez-nous",
+    "description": "Une question, un projet ? Notre équipe vous répond sous 24h.",
+    "seo": {
+      "title": "Contact",
+      "description": "Contactez Jadelec pour vos projets d'électricité générale, GTB, bornes de recharge IRVE ou domotique. Devis gratuit sous 24h."
+    }
+  },
+  "contactInfo": {
+    "title": "Nos coordonnées",
+    "addressLabel": "Adresse",
+    "phoneLabel": "Téléphone",
+    "emailLabel": "Email",
+    "hoursLabel": "Horaires"
+  },
+  "emergency": {
+    "enabled": true,
+    "title": "Urgence ?",
+    "description": "Pour les interventions urgentes, appelez-nous directement.",
+    "buttonText": "Appeler maintenant"
+  },
+  "form": {
+    "title": "Demande de devis gratuit",
+    "fields": {
+      "name": "Nom complet",
+      "email": "Email",
+      "phone": "Téléphone",
+      "company": "Entreprise (optionnel)",
+      "subject": "Sujet",
+      "message": "Votre message"
+    },
+    "subjects": [
+      "Demande de devis",
+      "Demande d'information",
+      "Urgence / Dépannage",
+      "Autre"
+    ],
+    "submitButton": "Envoyer ma demande",
+    "privacyText": "En soumettant ce formulaire, vous acceptez notre politique de confidentialité."
+  },
+  "thankYou": {
+    "title": "Merci pour votre message !",
+    "description": "Nous avons bien reçu votre demande et vous répondrons dans les plus brefs délais.",
+    "backButton": "Retour à l'accueil"
+  }
+}

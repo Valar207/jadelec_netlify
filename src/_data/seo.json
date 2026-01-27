@@ -1,0 +1,35 @@
+{
+  "defaults": {
+    "titleSuffix": " | Jadelec - Électricité générale",
+    "description": "Jadelec, votre partenaire en électricité générale à La Courneuve (93). Spécialistes GTB, bornes de recharge IRVE, domotique, courant fort et faible.",
+    "keywords": "électricité générale, électricien, GTB, bornes de recharge, IRVE, domotique, courant fort, courant faible, La Courneuve, Île-de-France, 93",
+    "author": "Jadelec"
+  },
+  "openGraph": {
+    "type": "website",
+    "image": "/assets/images/og-default.jpg",
+    "imageWidth": "1200",
+    "imageHeight": "630"
+  },
+  "twitter": {
+    "card": "summary_large_image",
+    "handle": ""
+  },
+  "analytics": {
+    "googleAnalyticsId": "",
+    "googleTagManagerId": ""
+  },
+  "verification": {
+    "google": "",
+    "bing": ""
+  },
+  "robots": {
+    "index": true,
+    "follow": true
+  },
+  "scripts": {
+    "head": "",
+    "bodyStart": "",
+    "bodyEnd": ""
+  }
+}

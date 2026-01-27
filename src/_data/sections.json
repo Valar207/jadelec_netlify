@@ -1,0 +1,85 @@
+{
+  "available": [
+    {
+      "id": "hero",
+      "name": "Hero (Bannière principale)",
+      "description": "Grande bannière avec titre, description et boutons d'action"
+    },
+    {
+      "id": "services",
+      "name": "Services",
+      "description": "Grille des services avec icônes"
+    },
+    {
+      "id": "stats",
+      "name": "Statistiques",
+      "description": "Chiffres clés de l'entreprise"
+    },
+    {
+      "id": "whyUs",
+      "name": "Pourquoi nous choisir",
+      "description": "Avantages et points forts"
+    },
+    {
+      "id": "cta",
+      "name": "Appel à l'action",
+      "description": "Section avec boutons pour inciter au contact"
+    },
+    {
+      "id": "testimonials",
+      "name": "Témoignages",
+      "description": "Avis et témoignages clients"
+    },
+    {
+      "id": "faq",
+      "name": "FAQ",
+      "description": "Questions fréquemment posées"
+    },
+    {
+      "id": "gallery",
+      "name": "Galerie",
+      "description": "Galerie d'images"
+    },
+    {
+      "id": "text",
+      "name": "Texte libre",
+      "description": "Section de texte personnalisable"
+    }
+  ],
+  "testimonials": {
+    "enabled": false,
+    "title": "Ce que disent nos clients",
+    "items": [
+      {
+        "name": "Jean Dupont",
+        "company": "Société ABC",
+        "text": "Excellent travail, équipe réactive et professionnelle.",
+        "rating": 5
+      }
+    ]
+  },
+  "faq": {
+    "enabled": false,
+    "title": "Questions fréquentes",
+    "items": [
+      {
+        "question": "Quels sont vos délais d'intervention ?",
+        "answer": "Nous intervenons sous 24h pour les urgences et proposons des rendez-vous sous 48h pour les devis."
+      },
+      {
+        "question": "Intervenez-vous le week-end ?",
+        "answer": "Oui, nous proposons un service d'urgence 7j/7 pour les dépannages critiques."
+      },
+      {
+        "question": "Êtes-vous certifiés IRVE ?",
+        "answer": "Oui, nous sommes certifiés pour l'installation de bornes de recharge pour véhicules électriques."
+      }
+    ]
+  },
+  "gallery": {
+    "enabled": false,
+    "title": "Nos réalisations en images",
+    "images": []
+  },
+  "textBlocks": []
+}

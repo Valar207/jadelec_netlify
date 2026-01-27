@@ -1,0 +1,36 @@
+{
+  "page": {
+    "title": "Nos réalisations",
+    "description": "Découvrez nos projets d'électricité générale réalisés pour des entreprises et copropriétés en Île-de-France.",
+    "seo": {
+      "title": "Réalisations",
+      "description": "Découvrez les réalisations de Jadelec : installations électriques, GTB, bornes IRVE pour entreprises et copropriétés en Île-de-France."
+    }
+  },
+  "intro": {
+    "badge": "Notre portfolio",
+    "title": "Des projets",
+    "titleHighlight": "réussis",
+    "description": "Chaque projet est unique. Découvrez comment nous avons accompagné nos clients dans leurs installations électriques."
+  },
+  "categories": [
+    "Tous",
+    "Tertiaire",
+    "Copropriété",
+    "Industriel",
+    "Particulier"
+  ],
+  "cta": {
+    "enabled": true,
+    "title": "Vous avez un projet similaire ?",
+    "description": "Contactez-nous pour discuter de votre projet et obtenir un devis personnalisé.",
+    "buttonText": "Demander un devis",
+    "buttonUrl": "/contact/"
+  },
+  "card": {
+    "viewMore": "Voir le projet",
+    "clientLabel": "Client",
+    "locationLabel": "Lieu",
+    "yearLabel": "Année"
+  }
+}

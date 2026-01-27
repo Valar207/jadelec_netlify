@@ -1,0 +1,43 @@
+{
+  "company": {
+    "description": "Votre partenaire en électricité générale depuis plus de 15 ans.",
+    "showAddress": true
+  },
+  "sections": {
+    "contact": {
+      "title": "Contact",
+      "showPhone": true,
+      "showMobile": true,
+      "showEmail": true
+    },
+    "hours": {
+      "title": "Horaires",
+      "emergencyText": "Intervention d'urgence 24h/24",
+      "showEmergency": true
+    },
+    "services": {
+      "title": "Nos services",
+      "showServices": true
+    }
+  },
+  "social": {
+    "enabled": false,
+    "title": "Suivez-nous",
+    "links": [
+      {
+        "name": "LinkedIn",
+        "url": "",
+        "icon": "linkedin"
+      },
+      {
+        "name": "Facebook",
+        "url": "",
+        "icon": "facebook"
+      }
+    ]
+  },
+  "bottom": {
+    "copyrightText": "© 2024 Jadelec. Tous droits réservés.",
+    "showYear": true
+  }
+}
