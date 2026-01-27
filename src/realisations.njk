@@ -1,15 +1,18 @@
 ---
 layout: layouts/base.njk
-title: Nos réalisations
-description: Découvrez les projets réalisés par Jadelec en électricité générale, GTB, bornes de recharge IRVE et domotique pour entreprises et copropriétés.
+title: "{{ pages.realisations.page.seo.title }}"
+description: "{{ pages.realisations.page.seo.description }}"
 ---
 
 <section class="py-12 md:py-16">
   <div class="container mx-auto px-4">
     <div class="text-center mb-12">
-      <h1 class="text-3xl md:text-4xl font-bold text-primary-600 dark:text-primary-400 mb-4">Nos réalisations</h1>
+      <span class="badge badge-primary mb-4">{{ pages.realisations.intro.badge }}</span>
+      <h1 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+        {{ pages.realisations.intro.title }} <span class="gradient-text">{{ pages.realisations.intro.titleHighlight }}</span>
+      </h1>
       <p class="text-xl text-gray-600 dark:text-dark-300 max-w-2xl mx-auto">
-        Découvrez quelques-uns de nos projets en électricité générale, GTB, bornes de recharge et domotique.
+        {{ pages.realisations.intro.description }}
       </p>
     </div>
     
@@ -29,15 +32,17 @@ description: Découvrez les projets réalisés par Jadelec en électricité gén
     {% endif %}
     
     <!-- CTA -->
+    {% if pages.realisations.cta.enabled %}
     <div class="mt-16 bg-primary-50 dark:bg-primary-900/20 border border-primary-100 dark:border-primary-800/30 rounded-xl p-8 text-center">
-      <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Vous avez un projet similaire ?</h2>
-      <p class="text-gray-600 dark:text-dark-300 mb-6">Contactez-nous pour discuter de vos besoins et obtenir un devis gratuit.</p>
-      <a href="/contact/" class="inline-flex items-center px-6 py-3 bg-primary-600 text-white font-semibold rounded-lg hover:bg-primary-700 transition-colors">
-        Demander un devis
+      <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">{{ pages.realisations.cta.title }}</h2>
+      <p class="text-gray-600 dark:text-dark-300 mb-6">{{ pages.realisations.cta.description }}</p>
+      <a href="{{ pages.realisations.cta.buttonUrl }}" class="inline-flex items-center px-6 py-3 bg-primary-600 text-white font-semibold rounded-lg hover:bg-primary-700 transition-colors">
+        {{ pages.realisations.cta.buttonText }}
         <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
         </svg>
       </a>
     </div>
+    {% endif %}
   </div>
 </section>

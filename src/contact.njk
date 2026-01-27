@@ -1,16 +1,16 @@
 ---
 layout: layouts/base.njk
-title: Contact
-description: Contactez Jadelec pour vos projets d'électricité générale, GTB, bornes de recharge IRVE ou domotique. Devis gratuit sous 24h.
+title: "{{ pages.contact.page.seo.title }}"
+description: "{{ pages.contact.page.seo.description }}"
 ---
 
 <section class="py-12 md:py-16">
   <div class="container mx-auto px-4">
     <div class="max-w-6xl mx-auto">
       <div class="text-center mb-12">
-        <h1 class="text-3xl md:text-4xl font-bold text-primary-600 dark:text-primary-400 mb-4">Contactez-nous</h1>
+        <h1 class="text-3xl md:text-4xl font-bold text-primary-600 dark:text-primary-400 mb-4">{{ pages.contact.page.title }}</h1>
         <p class="text-xl text-gray-600 dark:text-dark-300">
-          Une question, un projet ? Notre équipe vous répond sous 24h.
+          {{ pages.contact.page.description }}
         </p>
       </div>
       
@@ -18,7 +18,7 @@ description: Contactez Jadelec pour vos projets d'électricité générale, GTB,
         <!-- Contact Info -->
         <div class="lg:col-span-1 space-y-6">
           <div class="bg-gray-50 dark:bg-dark-800 border border-gray-100 dark:border-dark-700 rounded-xl p-6">
-            <h2 class="text-xl font-bold text-gray-900 dark:text-white mb-4">Nos coordonnées</h2>
+            <h2 class="text-xl font-bold text-gray-900 dark:text-white mb-4">{{ pages.contact.contactInfo.title }}</h2>
             
             <div class="space-y-4">
               <div class="flex items-start">
@@ -27,7 +27,7 @@ description: Contactez Jadelec pour vos projets d'électricité générale, GTB,
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
                 </svg>
                 <div>
-                  <p class="font-medium text-gray-900 dark:text-white">Adresse</p>
+                  <p class="font-medium text-gray-900 dark:text-white">{{ pages.contact.contactInfo.addressLabel }}</p>
                   <p class="text-gray-600 dark:text-dark-300">
                     {{ site.address.street }}<br>
                     {{ site.address.postalCode }} {{ site.address.city }}
@@ -40,7 +40,7 @@ description: Contactez Jadelec pour vos projets d'électricité générale, GTB,
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
                 </svg>
                 <div>
-                  <p class="font-medium text-gray-900 dark:text-white">Téléphone</p>
+                  <p class="font-medium text-gray-900 dark:text-white">{{ pages.contact.contactInfo.phoneLabel }}</p>
                   <p class="text-gray-600 dark:text-dark-300">
                     <a href="tel:{{ site.phone | replace(' ', '') }}" class="hover:text-primary-600 dark:hover:text-primary-400">{{ site.phone }}</a><br>
                     <a href="tel:{{ site.mobile | replace(' ', '') }}" class="hover:text-primary-600 dark:hover:text-primary-400">{{ site.mobile }}</a>
@@ -53,7 +53,7 @@ description: Contactez Jadelec pour vos projets d'électricité générale, GTB,
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
                 </svg>
                 <div>
-                  <p class="font-medium text-gray-900 dark:text-white">Email</p>
+                  <p class="font-medium text-gray-900 dark:text-white">{{ pages.contact.contactInfo.emailLabel }}</p>
                   <p class="text-gray-600 dark:text-dark-300">
                     <a href="mailto:{{ site.email }}" class="hover:text-primary-600 dark:hover:text-primary-400">{{ site.email }}</a>
                   </p>
@@ -65,16 +65,17 @@ description: Contactez Jadelec pour vos projets d'électricité générale, GTB,
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
                 </svg>
                 <div>
-                  <p class="font-medium text-gray-900 dark:text-white">Horaires</p>
+                  <p class="font-medium text-gray-900 dark:text-white">{{ pages.contact.contactInfo.hoursLabel }}</p>
                   <p class="text-gray-600 dark:text-dark-300">{{ site.hours }}</p>
                 </div>
               </div>
             </div>
           </div>
           
+          {% if pages.contact.emergency.enabled %}
           <div class="bg-primary-50 dark:bg-primary-900/20 border border-primary-100 dark:border-primary-800/30 rounded-xl p-6">
-            <h3 class="font-bold text-gray-900 dark:text-white mb-2">Urgence ?</h3>
-            <p class="text-gray-600 dark:text-dark-300 mb-4">Pour les interventions urgentes, appelez-nous directement.</p>
+            <h3 class="font-bold text-gray-900 dark:text-white mb-2">{{ pages.contact.emergency.title }}</h3>
+            <p class="text-gray-600 dark:text-dark-300 mb-4">{{ pages.contact.emergency.description }}</p>
             <a href="tel:{{ site.mobile | replace(' ', '') }}" class="inline-flex items-center text-primary-600 dark:text-primary-400 font-medium hover:text-primary-800 dark:hover:text-primary-300">
               <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
@@ -82,12 +83,13 @@ description: Contactez Jadelec pour vos projets d'électricité générale, GTB,
               {{ site.mobile }}
             </a>
           </div>
+          {% endif %}
         </div>
         
         <!-- Contact Form -->
         <div class="lg:col-span-2">
           <div class="bg-white dark:bg-dark-800 rounded-xl shadow-sm border border-gray-100 dark:border-dark-700 p-6 md:p-8">
-            <h2 class="text-xl font-bold text-gray-900 dark:text-white mb-6">Demande de devis gratuit</h2>
+            <h2 class="text-xl font-bold text-gray-900 dark:text-white mb-6">{{ pages.contact.form.title }}</h2>
             {% include "components/contact-form.njk" %}
           </div>
         </div>

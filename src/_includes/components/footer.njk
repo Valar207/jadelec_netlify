@@ -4,21 +4,24 @@
     <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
       <!-- Company Info -->
       <div class="lg:col-span-1">
-        <img src="/assets/images/JADELEC Logo.png.webp" alt="Jadelec" class="h-12 mb-6">
-        <p class="text-gray-600 dark:text-dark-400 mb-6 leading-relaxed">{{ site.tagline }}</p>
+        <img src="{{ navigation.header.logo }}" alt="{{ navigation.header.logoAlt }}" class="h-12 mb-6">
+        <p class="text-gray-600 dark:text-dark-400 mb-6 leading-relaxed">{{ footer.company.description }}</p>
+        {% if footer.company.showAddress %}
         <p class="text-gray-600 dark:text-dark-300 text-sm">
           {{ site.address.street }}<br>
           {{ site.address.postalCode }} {{ site.address.city }}
         </p>
+        {% endif %}
       </div>
       
       <!-- Contact -->
       <div>
         <h3 class="text-gray-900 dark:text-white font-semibold mb-6 flex items-center">
           <span class="w-8 h-0.5 bg-primary-500 mr-3"></span>
-          Contact
+          {{ footer.sections.contact.title }}
         </h3>
         <ul class="space-y-4">
+          {% if footer.sections.contact.showPhone %}
           <li>
             <a href="tel:{{ site.phone | replace(' ', '') }}" class="flex items-center text-gray-600 dark:text-dark-400 hover:text-primary-500 transition-colors group">
               <div class="w-10 h-10 rounded-lg bg-gray-200 dark:bg-dark-800 border border-gray-300 dark:border-dark-700 flex items-center justify-center mr-3 group-hover:border-primary-500/50 transition-colors">
@@ -29,6 +32,8 @@
               {{ site.phone }}
             </a>
           </li>
+          {% endif %}
+          {% if footer.sections.contact.showMobile %}
           <li>
             <a href="tel:{{ site.mobile | replace(' ', '') }}" class="flex items-center text-gray-600 dark:text-dark-400 hover:text-primary-500 transition-colors group">
               <div class="w-10 h-10 rounded-lg bg-gray-200 dark:bg-dark-800 border border-gray-300 dark:border-dark-700 flex items-center justify-center mr-3 group-hover:border-primary-500/50 transition-colors">
@@ -39,6 +44,8 @@
               {{ site.mobile }}
             </a>
           </li>
+          {% endif %}
+          {% if footer.sections.contact.showEmail %}
           <li>
             <a href="mailto:{{ site.email }}" class="flex items-center text-gray-600 dark:text-dark-400 hover:text-primary-500 transition-colors group">
               <div class="w-10 h-10 rounded-lg bg-gray-200 dark:bg-dark-800 border border-gray-300 dark:border-dark-700 flex items-center justify-center mr-3 group-hover:border-primary-500/50 transition-colors">
@@ -49,6 +56,7 @@
               {{ site.email }}
             </a>
           </li>
+          {% endif %}
         </ul>
       </div>
       
@@ -56,24 +64,27 @@
       <div>
         <h3 class="text-gray-900 dark:text-white font-semibold mb-6 flex items-center">
           <span class="w-8 h-0.5 bg-primary-500 mr-3"></span>
-          Horaires
+          {{ footer.sections.hours.title }}
         </h3>
         <div class="space-y-3">
           <p class="text-gray-600 dark:text-dark-400">{{ site.hours }}</p>
+          {% if footer.sections.hours.showEmergency %}
           <div class="flex items-center text-primary-500 text-sm">
             <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
             </svg>
-            Intervention d'urgence 24h/24
+            {{ footer.sections.hours.emergencyText }}
           </div>
+          {% endif %}
         </div>
       </div>
       
       <!-- Services -->
+      {% if footer.sections.services.showServices %}
       <div>
         <h3 class="text-gray-900 dark:text-white font-semibold mb-6 flex items-center">
           <span class="w-8 h-0.5 bg-primary-500 mr-3"></span>
-          Nos services
+          {{ footer.sections.services.title }}
         </h3>
         <ul class="space-y-3">
           {% for item in navigation.main %}
@@ -92,6 +103,7 @@
           {% endfor %}
         </ul>
       </div>
+      {% endif %}
     </div>
   </div>
   
@@ -100,7 +112,7 @@
     <div class="container mx-auto px-4 py-6">
       <div class="flex flex-col md:flex-row justify-between items-center gap-4">
         <p class="text-gray-600 dark:text-dark-300 text-sm">
-          © 2024 {{ site.name }}. Tous droits réservés.
+          {{ footer.bottom.copyrightText }}
         </p>
         <div class="flex items-center space-x-6">
           {% for item in navigation.footer %}
