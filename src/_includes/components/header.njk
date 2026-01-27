@@ -28,7 +28,7 @@
             </div>
           </div>
           {% else %}
-          <a href="{{ item.url }}" class="text-gray-700 dark:text-dark-300 hover:text-primary-500 font-medium transition-colors link-underline py-2">
+          <a href="{{ item.url }}" class="font-medium transition-colors py-2 {% if page.url == item.url %}text-primary-500 border-b-2 border-primary-500{% else %}text-gray-700 dark:text-dark-300 hover:text-primary-500 link-underline{% endif %}">
             {{ item.label }}
           </a>
           {% endif %}
