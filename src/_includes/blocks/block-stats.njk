@@ -1,0 +1,31 @@
+{# Block Stats #}
+{% set bgClass = "bg-white dark:bg-dark-900" %}
+{% if block.backgroundColor == "gray" %}
+  {% set bgClass = "bg-gray-50 dark:bg-dark-800" %}
+{% elif block.backgroundColor == "primary" %}
+  {% set bgClass = "bg-primary-600" %}
+{% elif block.backgroundColor == "dark" %}
+  {% set bgClass = "bg-dark-950" %}
+{% endif %}
+
+{% set textClass = "text-gray-900 dark:text-white" %}
+{% if block.backgroundColor == "primary" or block.backgroundColor == "dark" %}
+  {% set textClass = "text-white" %}
+{% endif %}
+
+<section class="{{ bgClass }} py-16">
+  <div class="container mx-auto px-4">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+      {% for stat in block.items %}
+      <div class="text-center">
+        <div class="text-4xl md:text-5xl font-bold {{ textClass }} mb-2">
+          {{ stat.value }}
+        </div>
+        <div class="text-sm md:text-base {% if block.backgroundColor == 'primary' or block.backgroundColor == 'dark' %}text-white/80{% else %}text-gray-600 dark:text-dark-400{% endif %}">
+          {{ stat.label }}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

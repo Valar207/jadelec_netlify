@@ -6,6 +6,37 @@
   
   {% include "components/seo-head.njk" %}
   
+  <!-- Dynamic Theme from CMS -->
+  <style>
+    :root {
+      /* Couleurs principales */
+      --color-primary: {{ theme.colors.primary | default('#2563eb') }};
+      --color-primary-dark: {{ theme.colors.primaryDark | default('#1d4ed8') }};
+      --color-primary-light: {{ theme.colors.primaryLight | default('#3b82f6') }};
+      --color-accent: {{ theme.colors.accent | default('#f59e0b') }};
+      --color-accent-dark: {{ theme.colors.accentDark | default('#d97706') }};
+      --color-success: {{ theme.colors.success | default('#10b981') }};
+      --color-error: {{ theme.colors.error | default('#ef4444') }};
+      --color-warning: {{ theme.colors.warning | default('#f59e0b') }};
+      
+      /* Polices */
+      --font-heading: '{{ theme.fonts.heading | default('Inter') }}', sans-serif;
+      --font-body: '{{ theme.fonts.body | default('Inter') }}', sans-serif;
+      
+      /* Espacements / Arrondis */
+      --radius: {{ theme.spacing.borderRadius | default('0.75rem') }};
+      --radius-lg: {{ theme.spacing.borderRadiusLarge | default('1rem') }};
+      --radius-sm: {{ theme.spacing.borderRadiusSmall | default('0.5rem') }};
+    }
+  </style>
+  
+  <!-- Google Fonts -->
+  {% if theme.fonts.googleFontsUrl %}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="{{ theme.fonts.googleFontsUrl }}" rel="stylesheet">
+  {% endif %}
+  
   <link rel="stylesheet" href="/assets/css/styles.css">
   
   <link rel="icon" href="/assets/images/favicon.png" type="image/png">

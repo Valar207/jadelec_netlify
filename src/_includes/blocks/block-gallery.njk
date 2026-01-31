@@ -1,0 +1,30 @@
+{# Block Gallery #}
+{% set colsClass = "grid-cols-2 md:grid-cols-3" %}
+{% if block.columns == "2" %}
+  {% set colsClass = "grid-cols-1 md:grid-cols-2" %}
+{% elif block.columns == "4" %}
+  {% set colsClass = "grid-cols-2 md:grid-cols-4" %}
+{% endif %}
+
+<section class="py-16 md:py-20">
+  <div class="container mx-auto px-4">
+    {% if block.title %}
+    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white text-center mb-12">
+      {{ block.title }}
+    </h2>
+    {% endif %}
+    
+    <div class="grid {{ colsClass }} gap-4">
+      {% for image in block.images %}
+      <div class="relative group overflow-hidden rounded-xl">
+        <img src="{{ image.url }}" alt="{{ image.caption or '' }}" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105">
+        {% if image.caption %}
+        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+          <span class="text-white text-sm">{{ image.caption }}</span>
+        </div>
+        {% endif %}
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

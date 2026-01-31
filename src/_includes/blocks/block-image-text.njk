@@ -1,0 +1,37 @@
+{# Block Image + Text #}
+<section class="py-16 md:py-20">
+  <div class="container mx-auto px-4">
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
+      {% if block.imagePosition == "left" %}
+      <div>
+        <img src="{{ block.image }}" alt="{{ block.title }}" class="rounded-2xl shadow-xl w-full">
+      </div>
+      {% endif %}
+      
+      <div>
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">
+          {{ block.title }}
+        </h2>
+        
+        <div class="prose prose-lg dark:prose-invert max-w-none mb-8">
+          {{ block.content | safe }}
+        </div>
+        
+        {% if block.button and block.button.text %}
+        <a href="{{ block.button.url }}" class="btn btn-primary">
+          {{ block.button.text }}
+          <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+          </svg>
+        </a>
+        {% endif %}
+      </div>
+      
+      {% if block.imagePosition != "left" %}
+      <div>
+        <img src="{{ block.image }}" alt="{{ block.title }}" class="rounded-2xl shadow-xl w-full">
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</section>

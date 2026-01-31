@@ -1,0 +1,54 @@
+{# Block Services #}
+<section class="py-16 md:py-20 bg-gray-50 dark:bg-dark-900">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-12">
+      {% if block.badge %}
+      <span class="badge badge-primary mb-4">{{ block.badge }}</span>
+      {% endif %}
+      
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+        {{ block.title }}
+      </h2>
+      
+      {% if block.description %}
+      <p class="text-lg text-gray-600 dark:text-dark-300 max-w-2xl mx-auto">
+        {{ block.description }}
+      </p>
+      {% endif %}
+    </div>
+    
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {% if block.fromCollection %}
+        {% for service in collections.services %}
+        <a href="{{ service.url }}" class="card p-6 hover:shadow-lg transition-all group">
+          <div class="w-12 h-12 bg-primary-100 dark:bg-primary-900/30 rounded-xl flex items-center justify-center mb-4 group-hover:bg-primary-500 transition-colors">
+            <svg class="w-6 h-6 text-primary-600 dark:text-primary-400 group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">{{ service.data.title }}</h3>
+          <p class="text-gray-600 dark:text-dark-400">{{ service.data.shortDescription or service.data.description }}</p>
+        </a>
+        {% endfor %}
+      {% else %}
+        {% for item in block.items %}
+        <div class="card p-6">
+          <div class="w-12 h-12 bg-primary-100 dark:bg-primary-900/30 rounded-xl flex items-center justify-center mb-4">
+            {% include "components/icon.njk" %}
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">{{ item.title }}</h3>
+          <p class="text-gray-600 dark:text-dark-400">{{ item.description }}</p>
+          {% if item.url %}
+          <a href="{{ item.url }}" class="inline-flex items-center text-primary-500 hover:text-primary-600 mt-4 font-medium">
+            En savoir plus
+            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+            </svg>
+          </a>
+          {% endif %}
+        </div>
+        {% endfor %}
+      {% endif %}
+    </div>
+  </div>
+</section>

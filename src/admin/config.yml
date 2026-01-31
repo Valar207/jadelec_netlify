@@ -19,6 +19,224 @@ public_folder: "/assets/images/uploads"
 show_preview_links: true
 
 collections:
+  # ========================================
+  # PAGE BUILDER - Pages avec blocs réordonnables
+  # ========================================
+  - name: "page-builder"
+    label: "🏗️ Page Builder"
+    folder: "src/builder-pages-data"
+    create: true
+    slug: "{{slug}}"
+    extension: "json"
+    format: "json"
+    fields:
+      - { label: "Titre de la page", name: "title", widget: "string" }
+      - { label: "URL (permalink)", name: "permalink", widget: "string", hint: "Ex: /ma-page/" }
+      - { label: "Description SEO", name: "description", widget: "text" }
+      - label: "🧱 Blocs de contenu (réordonnables)"
+        name: "blocks"
+        widget: "list"
+        types:
+          # BLOC HERO
+          - label: "🦸 Hero / Bannière"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Badge", name: "badge", widget: "string", required: false }
+              - { label: "Titre", name: "title", widget: "string" }
+              - { label: "Sous-titre", name: "subtitle", widget: "string", required: false }
+              - { label: "Description", name: "description", widget: "text", required: false }
+              - { label: "Image de fond", name: "backgroundImage", widget: "image", required: false }
+              - { label: "Couleur de fond", name: "backgroundColor", widget: "select", options: ["primary", "dark", "light", "gradient"], default: "primary" }
+              - label: "Bouton principal"
+                name: "primaryButton"
+                widget: "object"
+                required: false
+                fields:
+                  - { label: "Texte", name: "text", widget: "string" }
+                  - { label: "URL", name: "url", widget: "string" }
+              - label: "Bouton secondaire"
+                name: "secondaryButton"
+                widget: "object"
+                required: false
+                fields:
+                  - { label: "Texte", name: "text", widget: "string" }
+                  - { label: "URL", name: "url", widget: "string" }
+          
+          # BLOC TEXTE
+          - label: "📝 Texte / Contenu"
+            name: "text"
+            widget: "object"
+            fields:
+              - { label: "Titre", name: "title", widget: "string", required: false }
+              - { label: "Contenu", name: "content", widget: "markdown" }
+              - { label: "Largeur", name: "width", widget: "select", options: ["narrow", "medium", "full"], default: "medium" }
+              - { label: "Alignement", name: "align", widget: "select", options: ["left", "center", "right"], default: "left" }
+          
+          # BLOC SERVICES
+          - label: "🔧 Services"
+            name: "services"
+            widget: "object"
+            fields:
+              - { label: "Badge", name: "badge", widget: "string", required: false }
+              - { label: "Titre", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text", required: false }
+              - { label: "Afficher depuis la collection", name: "fromCollection", widget: "boolean", default: true, hint: "Si activé, affiche les services de la collection Services" }
+              - label: "Services personnalisés"
+                name: "items"
+                widget: "list"
+                required: false
+                fields:
+                  - { label: "Titre", name: "title", widget: "string" }
+                  - { label: "Description", name: "description", widget: "text" }
+                  - { label: "URL", name: "url", widget: "string", required: false }
+                  - { label: "Icône", name: "icon", widget: "select", options: ["bolt", "cpu", "sun", "building", "settings", "shield", "users", "check", "star", "phone", "mail", "clock"] }
+          
+          # BLOC STATISTIQUES
+          - label: "📊 Statistiques"
+            name: "stats"
+            widget: "object"
+            fields:
+              - { label: "Couleur de fond", name: "backgroundColor", widget: "select", options: ["white", "gray", "primary", "dark"], default: "white" }
+              - label: "Statistiques"
+                name: "items"
+                widget: "list"
+                fields:
+                  - { label: "Valeur", name: "value", widget: "string", hint: "Ex: 15+, 500+, 98%" }
+                  - { label: "Label", name: "label", widget: "string" }
+                  - { label: "Icône", name: "icon", widget: "select", options: ["users", "check", "star", "bolt", "clock", "shield"], required: false }
+          
+          # BLOC AVANTAGES
+          - label: "💪 Avantages / Pourquoi nous"
+            name: "features"
+            widget: "object"
+            fields:
+              - { label: "Badge", name: "badge", widget: "string", required: false }
+              - { label: "Titre", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text", required: false }
+              - { label: "Image", name: "image", widget: "image", required: false }
+              - { label: "Position image", name: "imagePosition", widget: "select", options: ["left", "right"], default: "right" }
+              - label: "Avantages"
+                name: "items"
+                widget: "list"
+                fields:
+                  - { label: "Titre", name: "title", widget: "string" }
+                  - { label: "Description", name: "description", widget: "text" }
+                  - { label: "Icône", name: "icon", widget: "select", options: ["shield", "bolt", "users", "check", "star", "clock", "cpu", "settings"] }
+          
+          # BLOC TÉMOIGNAGES
+          - label: "💬 Témoignages"
+            name: "testimonials"
+            widget: "object"
+            fields:
+              - { label: "Titre", name: "title", widget: "string", default: "Ce que disent nos clients" }
+              - { label: "Badge", name: "badge", widget: "string", required: false }
+              - label: "Témoignages"
+                name: "items"
+                widget: "list"
+                fields:
+                  - { label: "Nom", name: "name", widget: "string" }
+                  - { label: "Entreprise / Rôle", name: "company", widget: "string", required: false }
+                  - { label: "Témoignage", name: "text", widget: "text" }
+                  - { label: "Note (1-5)", name: "rating", widget: "number", min: 1, max: 5, default: 5 }
+                  - { label: "Photo", name: "photo", widget: "image", required: false }
+          
+          # BLOC FAQ
+          - label: "❓ FAQ"
+            name: "faq"
+            widget: "object"
+            fields:
+              - { label: "Titre", name: "title", widget: "string", default: "Questions fréquentes" }
+              - { label: "Badge", name: "badge", widget: "string", required: false }
+              - label: "Questions"
+                name: "items"
+                widget: "list"
+                fields:
+                  - { label: "Question", name: "question", widget: "string" }
+                  - { label: "Réponse", name: "answer", widget: "text" }
+          
+          # BLOC GALERIE
+          - label: "🖼️ Galerie"
+            name: "gallery"
+            widget: "object"
+            fields:
+              - { label: "Titre", name: "title", widget: "string", required: false }
+              - { label: "Colonnes", name: "columns", widget: "select", options: ["2", "3", "4"], default: "3" }
+              - label: "Images"
+                name: "images"
+                widget: "list"
+                fields:
+                  - { label: "Image", name: "url", widget: "image" }
+                  - { label: "Légende", name: "caption", widget: "string", required: false }
+          
+          # BLOC CTA
+          - label: "📣 Appel à l'action (CTA)"
+            name: "cta"
+            widget: "object"
+            fields:
+              - { label: "Titre", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text", required: false }
+              - { label: "Style", name: "style", widget: "select", options: ["primary", "dark", "gradient"], default: "primary" }
+              - label: "Bouton principal"
+                name: "primaryButton"
+                widget: "object"
+                fields:
+                  - { label: "Texte", name: "text", widget: "string" }
+                  - { label: "URL", name: "url", widget: "string" }
+              - label: "Bouton secondaire"
+                name: "secondaryButton"
+                widget: "object"
+                required: false
+                fields:
+                  - { label: "Texte", name: "text", widget: "string" }
+                  - { label: "URL", name: "url", widget: "string" }
+          
+          # BLOC CONTACT
+          - label: "📞 Contact"
+            name: "contact"
+            widget: "object"
+            fields:
+              - { label: "Titre", name: "title", widget: "string", default: "Contactez-nous" }
+              - { label: "Description", name: "description", widget: "text", required: false }
+              - { label: "Afficher le formulaire", name: "showForm", widget: "boolean", default: true }
+              - { label: "Afficher les infos de contact", name: "showInfo", widget: "boolean", default: true }
+              - { label: "Afficher la carte", name: "showMap", widget: "boolean", default: false }
+          
+          # BLOC RÉALISATIONS
+          - label: "📸 Réalisations"
+            name: "realisations"
+            widget: "object"
+            fields:
+              - { label: "Titre", name: "title", widget: "string", default: "Nos réalisations" }
+              - { label: "Badge", name: "badge", widget: "string", required: false }
+              - { label: "Nombre à afficher", name: "limit", widget: "number", default: 6 }
+              - { label: "Afficher le bouton voir plus", name: "showMoreButton", widget: "boolean", default: true }
+          
+          # BLOC IMAGE + TEXTE
+          - label: "🖼️ Image + Texte"
+            name: "image-text"
+            widget: "object"
+            fields:
+              - { label: "Titre", name: "title", widget: "string" }
+              - { label: "Contenu", name: "content", widget: "markdown" }
+              - { label: "Image", name: "image", widget: "image" }
+              - { label: "Position image", name: "imagePosition", widget: "select", options: ["left", "right"], default: "left" }
+              - label: "Bouton"
+                name: "button"
+                widget: "object"
+                required: false
+                fields:
+                  - { label: "Texte", name: "text", widget: "string" }
+                  - { label: "URL", name: "url", widget: "string" }
+          
+          # BLOC SÉPARATEUR
+          - label: "➖ Séparateur"
+            name: "divider"
+            widget: "object"
+            fields:
+              - { label: "Style", name: "style", widget: "select", options: ["line", "space", "dots"], default: "space" }
+              - { label: "Taille", name: "size", widget: "select", options: ["small", "medium", "large"], default: "medium" }
+
   - name: "realisations"
     label: "Réalisations"
     folder: "src/realisations"
@@ -200,7 +418,7 @@ collections:
               - { label: "Texte bouton retour", name: "backButton", widget: "string" }
 
       - label: "Page Réalisations"
-        name: "realisations"
+        name: "realisations-page"
         file: "src/_data/pages/realisations.json"
         fields:
           - label: "📄 Page"
@@ -378,7 +596,7 @@ collections:
     files:
       - label: "Paramètres des pages services"
         name: "services-config"
-        file: "src/_data/services-config.json"
+        file: "src/_data/servicesConfig.json"
         fields:
           - label: "📄 Page"
             name: "page"
@@ -475,17 +693,11 @@ collections:
               - { label: "Ville", name: "city", widget: "string" }
               - { label: "Code postal", name: "postalCode", widget: "string" }
               - { label: "Pays", name: "country", widget: "string", default: "France" }
-          - label: "Réseaux sociaux"
-            name: "social"
-            widget: "object"
-            fields:
-              - { label: "LinkedIn", name: "linkedin", widget: "string", required: false }
           - label: "SEO"
             name: "seo"
             widget: "object"
             fields:
               - { label: "Image par défaut (partage)", name: "defaultImage", widget: "image", required: false }
-              - { label: "Twitter/X handle", name: "twitterHandle", widget: "string", required: false }
 
       - label: "Thème et couleurs"
         name: "theme"

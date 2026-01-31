@@ -1,0 +1,30 @@
+{# Block Text #}
+{% set widthClass = "max-w-3xl" %}
+{% if block.width == "narrow" %}
+  {% set widthClass = "max-w-2xl" %}
+{% elif block.width == "full" %}
+  {% set widthClass = "max-w-6xl" %}
+{% endif %}
+
+{% set alignClass = "text-left" %}
+{% if block.align == "center" %}
+  {% set alignClass = "text-center mx-auto" %}
+{% elif block.align == "right" %}
+  {% set alignClass = "text-right ml-auto" %}
+{% endif %}
+
+<section class="py-16 md:py-20">
+  <div class="container mx-auto px-4">
+    <div class="{{ widthClass }} {{ alignClass }}">
+      {% if block.title %}
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">
+        {{ block.title }}
+      </h2>
+      {% endif %}
+      
+      <div class="prose prose-lg dark:prose-invert max-w-none">
+        {{ block.content | safe }}
+      </div>
+    </div>
+  </div>
+</section>

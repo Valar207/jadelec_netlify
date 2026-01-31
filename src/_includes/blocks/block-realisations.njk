@@ -1,0 +1,47 @@
+{# Block Realisations #}
+<section class="py-16 md:py-20">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-12">
+      {% if block.badge %}
+      <span class="badge badge-primary mb-4">{{ block.badge }}</span>
+      {% endif %}
+      
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">
+        {{ block.title }}
+      </h2>
+    </div>
+    
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {% set realisationsToShow = collections.realisations | reverse %}
+      {% for realisation in realisationsToShow %}
+        {% if loop.index <= block.limit %}
+        <a href="{{ realisation.url }}" class="card group overflow-hidden">
+          {% if realisation.data.images and realisation.data.images[0] %}
+          <div class="relative h-48 overflow-hidden">
+            <img src="{{ realisation.data.images[0] }}" alt="{{ realisation.data.title }}" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+            <div class="absolute top-4 left-4">
+              <span class="px-3 py-1 bg-primary-600 text-white text-sm font-medium rounded-full">{{ realisation.data.category }}</span>
+            </div>
+          </div>
+          {% endif %}
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2 group-hover:text-primary-600 transition-colors">{{ realisation.data.title }}</h3>
+            <p class="text-gray-600 dark:text-dark-400 line-clamp-2">{{ realisation.data.description }}</p>
+          </div>
+        </a>
+        {% endif %}
+      {% endfor %}
+    </div>
+    
+    {% if block.showMoreButton %}
+    <div class="text-center mt-10">
+      <a href="/realisations/" class="btn btn-primary">
+        Voir toutes nos réalisations
+        <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+        </svg>
+      </a>
+    </div>
+    {% endif %}
+  </div>
+</section>

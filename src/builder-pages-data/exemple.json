@@ -1,0 +1,67 @@
+{
+  "title": "Page Exemple",
+  "permalink": "/exemple/",
+  "description": "Une page d'exemple créée avec le Page Builder",
+  "blocks": [
+    {
+      "type": "hero",
+      "badge": "Page Builder",
+      "title": "Créez vos pages facilement",
+      "subtitle": "Avec le système de blocs réordonnables",
+      "description": "Ajoutez, supprimez et réorganisez les blocs comme vous le souhaitez.",
+      "backgroundColor": "primary",
+      "primaryButton": {
+        "text": "Découvrir",
+        "url": "#services"
+      },
+      "secondaryButton": {
+        "text": "En savoir plus",
+        "url": "#features"
+      }
+    },
+    {
+      "type": "stats",
+      "backgroundColor": "white",
+      "items": [
+        { "value": "12+", "label": "Types de blocs" },
+        { "value": "100%", "label": "Personnalisable" },
+        { "value": "0€", "label": "Gratuit" },
+        { "value": "∞", "label": "Possibilités" }
+      ]
+    },
+    {
+      "type": "features",
+      "badge": "Pourquoi nous choisir",
+      "title": "Des fonctionnalités puissantes",
+      "description": "Tout ce dont vous avez besoin pour créer un site professionnel.",
+      "imagePosition": "right",
+      "items": [
+        {
+          "title": "Blocs réordonnables",
+          "description": "Glissez-déposez vos blocs pour les réorganiser facilement.",
+          "icon": "settings"
+        },
+        {
+          "title": "Thème personnalisable",
+          "description": "Changez les couleurs, polices et espacements depuis le CMS.",
+          "icon": "bolt"
+        },
+        {
+          "title": "100% responsive",
+          "description": "Votre site s'adapte automatiquement à tous les écrans.",
+          "icon": "check"
+        }
+      ]
+    },
+    {
+      "type": "cta",
+      "title": "Prêt à commencer ?",
+      "description": "Créez votre première page avec le Page Builder dès maintenant.",
+      "style": "gradient",
+      "primaryButton": {
+        "text": "Commencer",
+        "url": "/contact/"
+      }
+    }
+  ]
+}

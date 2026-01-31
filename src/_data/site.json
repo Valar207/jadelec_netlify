@@ -1,21 +1,21 @@
 {
-  "name": "Jadelec",
-  "tagline": "Électricité générale",
-  "description": "Jadelec, votre partenaire en électricité générale à La Courneuve (93). Spécialistes GTB, bornes de recharge IRVE, domotique, courant fort et faible.",
-  "url": "https://www.jadelec.net",
-  "phone": "01 48 35 50 51",
   "mobile": "06 98 23 62 58",
-  "email": "contact@jadelec.net",
+  "name": "Jadelec",
+  "social": {
+    "linkedin": ""
+  },
+  "phone": "01 48 35 50 51",
+  "tagline": "Électricité générale",
+  "url": "https://www.jadelec.net",
+  "hours": "Lundi - Vendredi : 8h-12h / 13h30-17h",
   "address": {
     "street": "163 avenue Paul Vaillant-Couturier",
     "city": "LA COURNEUVE",
     "postalCode": "93120",
     "country": "France"
   },
-  "hours": "Lundi - Vendredi : 8h-12h / 13h30-17h",
-  "social": {
-    "linkedin": ""
-  },
+  "email": "contact@jadelec.net",
+  "description": "Jadelec, votre partenaire en électricité générale à La Courneuve (93). Spécialistes GTB, bornes de recharge IRVE, domotique, courant fort et faible.",
   "seo": {
     "defaultImage": "/assets/images/og-default.jpg",
     "twitterHandle": ""

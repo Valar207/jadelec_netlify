@@ -1,0 +1,74 @@
+{
+  "availableBlocks": [
+    {
+      "type": "hero",
+      "name": "Hero / Bannière",
+      "description": "Section principale avec titre, description et boutons"
+    },
+    {
+      "type": "text",
+      "name": "Texte / Contenu",
+      "description": "Bloc de texte libre avec titre optionnel"
+    },
+    {
+      "type": "services",
+      "name": "Services",
+      "description": "Grille de services avec icônes"
+    },
+    {
+      "type": "stats",
+      "name": "Statistiques",
+      "description": "Chiffres clés en ligne"
+    },
+    {
+      "type": "features",
+      "name": "Avantages / Pourquoi nous",
+      "description": "Liste d'avantages avec icônes"
+    },
+    {
+      "type": "testimonials",
+      "name": "Témoignages",
+      "description": "Avis clients avec notes"
+    },
+    {
+      "type": "faq",
+      "name": "FAQ",
+      "description": "Questions fréquentes en accordéon"
+    },
+    {
+      "type": "gallery",
+      "name": "Galerie",
+      "description": "Grille d'images"
+    },
+    {
+      "type": "cta",
+      "name": "Appel à l'action",
+      "description": "Section avec boutons d'action"
+    },
+    {
+      "type": "contact",
+      "name": "Formulaire de contact",
+      "description": "Formulaire avec informations de contact"
+    },
+    {
+      "type": "map",
+      "name": "Carte / Localisation",
+      "description": "Carte Google Maps intégrée"
+    },
+    {
+      "type": "team",
+      "name": "Équipe",
+      "description": "Présentation des membres de l'équipe"
+    },
+    {
+      "type": "pricing",
+      "name": "Tarifs",
+      "description": "Tableau de prix ou forfaits"
+    },
+    {
+      "type": "realisations",
+      "name": "Réalisations",
+      "description": "Grille des dernières réalisations"
+    }
+  ]
+}

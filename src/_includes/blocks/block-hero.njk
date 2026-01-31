@@ -1,0 +1,59 @@
+{# Block Hero #}
+{% set bgClass = "bg-gradient-to-br from-primary-600 to-primary-800" %}
+{% if block.backgroundColor == "dark" %}
+  {% set bgClass = "bg-dark-950" %}
+{% elif block.backgroundColor == "light" %}
+  {% set bgClass = "bg-gray-50" %}
+{% elif block.backgroundColor == "gradient" %}
+  {% set bgClass = "bg-gradient-to-br from-primary-600 via-primary-700 to-dark-900" %}
+{% endif %}
+
+<section class="relative {{ bgClass }} py-20 md:py-32 overflow-hidden">
+  {% if block.backgroundImage %}
+  <div class="absolute inset-0">
+    <img src="{{ block.backgroundImage }}" alt="" class="w-full h-full object-cover opacity-20">
+  </div>
+  {% endif %}
+  
+  <div class="container mx-auto px-4 relative z-10">
+    <div class="max-w-4xl mx-auto text-center">
+      {% if block.badge %}
+      <span class="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium bg-white/10 text-white mb-6">
+        {{ block.badge }}
+      </span>
+      {% endif %}
+      
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+        {{ block.title }}
+      </h1>
+      
+      {% if block.subtitle %}
+      <p class="text-xl md:text-2xl text-white/90 mb-4">
+        {{ block.subtitle }}
+      </p>
+      {% endif %}
+      
+      {% if block.description %}
+      <p class="text-lg text-white/80 mb-8 max-w-2xl mx-auto">
+        {{ block.description }}
+      </p>
+      {% endif %}
+      
+      {% if block.primaryButton or block.secondaryButton %}
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        {% if block.primaryButton and block.primaryButton.text %}
+        <a href="{{ block.primaryButton.url }}" class="btn bg-white text-primary-600 hover:bg-gray-100 px-8 py-4 text-lg font-semibold rounded-xl shadow-lg">
+          {{ block.primaryButton.text }}
+        </a>
+        {% endif %}
+        
+        {% if block.secondaryButton and block.secondaryButton.text %}
+        <a href="{{ block.secondaryButton.url }}" class="btn bg-transparent border-2 border-white text-white hover:bg-white/10 px-8 py-4 text-lg font-semibold rounded-xl">
+          {{ block.secondaryButton.text }}
+        </a>
+        {% endif %}
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</section>

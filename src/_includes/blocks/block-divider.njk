@@ -1,0 +1,21 @@
+{# Block Divider #}
+{% set sizeClass = "py-8" %}
+{% if block.size == "small" %}
+  {% set sizeClass = "py-4" %}
+{% elif block.size == "large" %}
+  {% set sizeClass = "py-16" %}
+{% endif %}
+
+<div class="{{ sizeClass }}">
+  <div class="container mx-auto px-4">
+    {% if block.style == "line" %}
+    <hr class="border-gray-200 dark:border-dark-700">
+    {% elif block.style == "dots" %}
+    <div class="flex justify-center gap-2">
+      <span class="w-2 h-2 bg-gray-300 dark:bg-dark-600 rounded-full"></span>
+      <span class="w-2 h-2 bg-gray-300 dark:bg-dark-600 rounded-full"></span>
+      <span class="w-2 h-2 bg-gray-300 dark:bg-dark-600 rounded-full"></span>
+    </div>
+    {% endif %}
+  </div>
+</div>

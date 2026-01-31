@@ -1,0 +1,50 @@
+{# Block Features / Why Us #}
+<section class="py-16 md:py-20">
+  <div class="container mx-auto px-4">
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
+      {% if block.imagePosition == "left" and block.image %}
+      <div class="order-2 lg:order-1">
+        <img src="{{ block.image }}" alt="{{ block.title }}" class="rounded-2xl shadow-xl w-full">
+      </div>
+      {% endif %}
+      
+      <div class="{% if block.imagePosition == 'left' %}order-1 lg:order-2{% endif %}">
+        {% if block.badge %}
+        <span class="badge badge-primary mb-4">{{ block.badge }}</span>
+        {% endif %}
+        
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+          {{ block.title }}
+        </h2>
+        
+        {% if block.description %}
+        <p class="text-lg text-gray-600 dark:text-dark-300 mb-8">
+          {{ block.description }}
+        </p>
+        {% endif %}
+        
+        <div class="space-y-6">
+          {% for item in block.items %}
+          <div class="flex gap-4">
+            <div class="flex-shrink-0 w-12 h-12 bg-primary-100 dark:bg-primary-900/30 rounded-xl flex items-center justify-center">
+              <svg class="w-6 h-6 text-primary-600 dark:text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-1">{{ item.title }}</h3>
+              <p class="text-gray-600 dark:text-dark-400">{{ item.description }}</p>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+      
+      {% if block.imagePosition != "left" and block.image %}
+      <div>
+        <img src="{{ block.image }}" alt="{{ block.title }}" class="rounded-2xl shadow-xl w-full">
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</section>

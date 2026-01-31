@@ -1,0 +1,35 @@
+---
+layout: layouts/base.njk
+---
+
+<div class="page-builder">
+  {% for block in blocks %}
+    {% if block.type == "hero" %}
+      {% include "blocks/block-hero.njk" %}
+    {% elif block.type == "text" %}
+      {% include "blocks/block-text.njk" %}
+    {% elif block.type == "services" %}
+      {% include "blocks/block-services.njk" %}
+    {% elif block.type == "stats" %}
+      {% include "blocks/block-stats.njk" %}
+    {% elif block.type == "features" %}
+      {% include "blocks/block-features.njk" %}
+    {% elif block.type == "testimonials" %}
+      {% include "blocks/block-testimonials.njk" %}
+    {% elif block.type == "faq" %}
+      {% include "blocks/block-faq.njk" %}
+    {% elif block.type == "gallery" %}
+      {% include "blocks/block-gallery.njk" %}
+    {% elif block.type == "cta" %}
+      {% include "blocks/block-cta.njk" %}
+    {% elif block.type == "contact" %}
+      {% include "blocks/block-contact.njk" %}
+    {% elif block.type == "realisations" %}
+      {% include "blocks/block-realisations.njk" %}
+    {% elif block.type == "image-text" %}
+      {% include "blocks/block-image-text.njk" %}
+    {% elif block.type == "divider" %}
+      {% include "blocks/block-divider.njk" %}
+    {% endif %}
+  {% endfor %}
+</div>

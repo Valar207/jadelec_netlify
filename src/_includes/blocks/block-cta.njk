@@ -1,0 +1,37 @@
+{# Block CTA #}
+{% set bgClass = "bg-primary-600" %}
+{% if block.style == "dark" %}
+  {% set bgClass = "bg-dark-950" %}
+{% elif block.style == "gradient" %}
+  {% set bgClass = "bg-gradient-to-r from-primary-600 to-primary-800" %}
+{% endif %}
+
+<section class="{{ bgClass }} py-16 md:py-20">
+  <div class="container mx-auto px-4">
+    <div class="max-w-3xl mx-auto text-center">
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
+        {{ block.title }}
+      </h2>
+      
+      {% if block.description %}
+      <p class="text-lg text-white/80 mb-8">
+        {{ block.description }}
+      </p>
+      {% endif %}
+      
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        {% if block.primaryButton and block.primaryButton.text %}
+        <a href="{{ block.primaryButton.url }}" class="btn bg-white text-primary-600 hover:bg-gray-100 px-8 py-4 text-lg font-semibold rounded-xl shadow-lg">
+          {{ block.primaryButton.text }}
+        </a>
+        {% endif %}
+        
+        {% if block.secondaryButton and block.secondaryButton.text %}
+        <a href="{{ block.secondaryButton.url }}" class="btn bg-transparent border-2 border-white text-white hover:bg-white/10 px-8 py-4 text-lg font-semibold rounded-xl">
+          {{ block.secondaryButton.text }}
+        </a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>

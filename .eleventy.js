@@ -18,6 +18,21 @@ module.exports = function(eleventyConfig) {
     return collectionApi.getFilteredByGlob("src/realisations/*.md");
   });
 
+  // Builder Pages - chargé depuis builder-pages-data/*.json
+  eleventyConfig.addGlobalData("builderPages", function() {
+    const fs = require('fs');
+    const path = require('path');
+    const dir = path.join(__dirname, 'src/builder-pages-data');
+    
+    if (!fs.existsSync(dir)) return [];
+    
+    const files = fs.readdirSync(dir).filter(f => f.endsWith('.json'));
+    return files.map(file => {
+      const content = fs.readFileSync(path.join(dir, file), 'utf8');
+      return JSON.parse(content);
+    });
+  });
+
   // Configuration
   return {
     dir: {
