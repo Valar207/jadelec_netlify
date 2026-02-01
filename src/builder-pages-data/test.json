@@ -13,6 +13,14 @@
           "icon": "check"
         }
       ]
+    },
+    {
+      "type": "contact",
+      "title": "Contactez-nous",
+      "showForm": true,
+      "showInfo": true,
+      "showMap": false,
+      "description": "dazd"
     }
   ]
 }
