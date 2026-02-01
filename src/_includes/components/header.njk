@@ -3,7 +3,7 @@
     <div class="flex items-center justify-between h-16 md:h-20">
       <!-- Logo -->
       <a href="/" class="flex items-center">
-        <img src="/assets/images/JADELEC Logo.png.webp" alt="Jadelec - Électricité Générale" class="h-10 md:h-12 w-auto">
+        <img src="{{ navigation.header.logo | default('/assets/images/JADELEC Logo.png.webp') }}" alt="{{ navigation.header.logoAlt | default('Jadelec') }}" class="h-10 md:h-12 w-auto">
       </a>
       
       <!-- Desktop Navigation -->
