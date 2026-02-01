@@ -1,0 +1,18 @@
+{
+  "title": "test",
+  "description": "tezzerzer",
+  "permalink": "rzerrzer",
+  "blocks": [
+    {
+      "type": "stats",
+      "backgroundColor": "primary",
+      "items": [
+        {
+          "value": "333",
+          "label": "rr",
+          "icon": "check"
+        }
+      ]
+    }
+  ]
+}
