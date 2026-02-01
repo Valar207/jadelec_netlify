@@ -2,7 +2,7 @@
   "header": {
     "logo": "/assets/images/uploads/screenshot-2026-01-26-at-19.25.21.png",
     "logoAlt": "Jadelec",
-    "showPhone": true,
+    "showPhone": false,
     "ctaButton": {
       "text": "Demander un devis",
       "url": "/contact/",
